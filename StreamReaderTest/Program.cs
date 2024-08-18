@@ -37,6 +37,12 @@
 
             writer.Close();
             reader.Close();
+
+            Console.WriteLine();
+
+            Console.WriteLine($"Czy plik reader istnieje? {File.Exists("reader.txt")}");
+            FileInfo fileInfo = new FileInfo("reader.txt");
+            Console.WriteLine($"Czy plik reader istnieje? Obiekt file info: {fileInfo.Exists}");
         }
     }
 }
